@@ -32,7 +32,7 @@ for i in obj:
       
 #en modo edicion
             
-#import bpy, bmesh
+# import bpy, bmesh
 
 # vertCount = 6 # <-- Faces with this amount of verts will be selected
 

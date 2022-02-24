@@ -13,7 +13,7 @@ aux_mtl=[]
 for i in obj:
     nom_obj.append(i.name) #almacenamos los nombres de los objetos de los cuales extraeremos el nombre de los materiales que contiene
 
-for e in nom_obj: #una iteración tomando como base maxima el numero de valores de nom_obj
+for e in nom_obj: #una iteración tomando como base maxima el numero de objetos seleccionados de nom_obj
     mtls = bpy.data.objects[e].material_slots #mtls es la variable que almacena el nombre de los materiales
     for h in mtls:
         if "web" in h.name:
