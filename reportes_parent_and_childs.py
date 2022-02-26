@@ -1,5 +1,6 @@
 import bpy
 
+
 outputFile = "/home/nevan/Documentos/test.txt"
 
 obj = bpy.context.selected_objects
