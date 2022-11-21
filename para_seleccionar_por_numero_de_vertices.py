@@ -47,3 +47,12 @@ for i in obj:
 #         f.select = True
 
 # bm.select_flush(True)
+
+
+#para asginar el objeto y su informacion a una variable
+
+#obj = bpy.context.selected_objects
+
+#luego hacemos un contador para poder acceder a las propiedades internas del objeto
+#for i in obj:
+#   print(i.data.vertices)# a traves de data podremos acceder a todas las propiedades del mesh
