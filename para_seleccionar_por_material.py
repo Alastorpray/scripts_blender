@@ -1,8 +1,5 @@
 import bpy
 
-
-
-
 listobj = []
 obj = bpy.context.visible_objects
 
