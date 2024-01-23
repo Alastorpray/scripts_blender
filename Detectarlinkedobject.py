@@ -16,3 +16,26 @@ if linked_collection and linked_collection.library:
         # Si necesitas acceder a más propiedades específicas, puedes hacerlo aquí
 else:
     print(f"No se encontró una colección vinculada con el nombre '{linked_collection_name}', o no es una colección vinculada.")
+
+#------------------------------------------------------------------------------------------------------------------------------------
+
+#mejorado
+import bpy
+
+def imprimir_objetos_de_coleccion(coleccion):
+    for obj in coleccion.objects:
+        print(f"Objeto: {obj.name}, Tipo de Dato: {obj.type}")
+    for subcoleccion in coleccion.children:
+        print(f"Subcolección: {subcoleccion.name}")
+        imprimir_objetos_de_coleccion(subcoleccion)
+
+# El nombre de la colección principal
+nombre_coleccion_principal = bpy.context.active_object.name
+
+# Intenta obtener la colección principal
+coleccion_principal = bpy.data.collections.get(nombre_coleccion_principal)
+
+if coleccion_principal:
+    imprimir_objetos_de_coleccion(coleccion_principal)
+else:
+    print(f"No se encontró una colección con el nombre '{nombre_coleccion_principal}'.")
